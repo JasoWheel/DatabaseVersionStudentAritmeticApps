@@ -307,3 +307,22 @@ function startIndivCsvDownload() {
     //var data = JSON.stringify({ "Period": Pd, "Grade": Gd, "Headers": Hdrs, "Titles": Titles, "Games": Games, "Dates": Dates, "Sort": Sort});
     xhr.send(data);
 }
+
+//start of student score update section
+let updateStart;
+
+//code to start score auto update
+function startScoreUpdate() {
+    updateStart = setInterval(pickNames, 15000);
+    document.getElementById("updateTheScores").onclick = stopScoreUpdate;
+    document.getElementById("updateTheScores").innerHTML = "Stop Auto Update";
+}
+
+//code to end score auto update
+function stopScoreUpdate() {
+    clearInterval(updateStart);
+    document.getElementById("updateTheScores").onclick = startScoreUpdate;
+    document.getElementById("updateTheScores").innerHTML = "Start Auto Update";
+}
+//end of student score update section
+

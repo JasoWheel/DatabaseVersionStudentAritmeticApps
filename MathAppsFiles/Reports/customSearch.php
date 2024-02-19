@@ -19,7 +19,8 @@
 <?php if (isset($_SESSION["UsersName"])) {?>
     <span><a href="../AdminPage.php"><button id="backButton">Back to Admin Page</button></a><label for="backButton">Custom Game Score Search</label>
 <?php if ($_SESSION["UsersName"] == "AdminWheel") {?>
-    <button id="testDownload" onclick="startCsvDownload()">Download CSV File</button></span>
+    <button id="testDownload" onclick="startCsvDownload()">Download CSV File</button>
+    <button id="updateTheScores" onclick="startScoreUpdate()">Start Auto Update</button></span>
 </div>
 
 <div class="MainBoxes" id="HeaderPicker" >
